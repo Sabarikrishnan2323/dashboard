@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-ry(xilz7oml=%9tlw_^g=+3f#1s9^pgtn9wu%f&u3#9-1zx(wc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://dashboard-frontend-h349.onrender.com/",]
-CORS_ALLOW_ALL_ORIGINS = True
+ALLOWED_HOSTS = ["dashboard-backend-pv96.onrender.com"]
+
 
 
 
@@ -44,17 +44,23 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'dashboard.urls'
+
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "https://dashboard-frontend-h349.onrender.com",
+]
 
 TEMPLATES = [
     {
