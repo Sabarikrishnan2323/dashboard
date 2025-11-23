@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ry(xilz7oml=%9tlw_^g=+3f#1s9^pgtn9wu%f&u3#9-1zx(wc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://dashboard-frontend-h349.onrender.com/",]
 CORS_ALLOW_ALL_ORIGINS = True
 
 
